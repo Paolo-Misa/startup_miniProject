@@ -7,11 +7,83 @@
 
 }
 
+.container {
+    display:grid;
+    height:250vh;
+    width:100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border: 1px solid red;
+}
+
+nav{
+    background: #a7ffeb;
+    grid-column: 3/12;
+    grid-row: 1/2;
+}
+
+main{
+    background: #84ffff;
+    grid-column: 3/12;
+    grid-row: 2/3;
+}
+
+.box-2{
+    background: #299191;
+    grid-column: 3/11;
+    grid-row: 3/4;
+}
+
+.features{
+    background: #08a0a0;
+    grid-column: 3/11;
+    grid-row: 4/5;
+}
+
+.content1{
+    background: #f1ee09;
+    grid-column: 3/7;
+    grid-row: 5/6;
+    margin: 1em;
+}
+
+.content2{
+    background: #7c7a0e;
+    grid-column: 7/11;
+    grid-row: 5/6;
+}
+
+.content3{
+    background: #90f012;
+    grid-column: 3/7;
+    grid-row: 6/7;
+}
+
+.content4{
+    background: #a36e1f;
+    grid-column: 7/11;
+    grid-row: 6/7;
+}
+
+.box-4{
+    background: #3937c0;
+    grid-column: 3/11;
+    grid-row: 7/8;
+}
+
+footer{
+    background: #d6297a;
+    grid-column: 3/11;
+    grid-row: 8/9;
+}
+
+
+/* 
 :root {
     --background: rgba(255, 255, 255, 1);
 }
 
-/* Section-Navbar */
+
 
 header{
     background: var(--background);
@@ -27,7 +99,7 @@ nav {
     top: 100%;
     width: 100%;
     left: 0;
-    /* display: none; */
+    
     transform: scale(1,0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
@@ -37,7 +109,7 @@ nav {
     display:flex;
     text-align: center;
     justify-content: center;
-    /* position: relative; */
+ 
     
 
     background: #FFFFFF;
@@ -48,7 +120,7 @@ nav {
 	border-radius: 50px;
     
 	color:rgba(33, 35, 83, 1);
-	font-weight: bold; /*changes the thickness of our texts*/
+	font-weight: bold; 
 }
 
 
@@ -79,7 +151,7 @@ nav a:hover{
     display: none;
 }
 .nav-toggle:checked ~ nav{
-    /* display:block */
+   
     transform: scale(1,1);
 }
 
@@ -123,6 +195,25 @@ nav a:hover{
     top: 7px;   
 }
 
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    border: 1px solid red;
+}
+
+.section-main-header {
+   
+}
+
+
+
+
+
+
+
 @media screen and (min-width: 400px){
     .nav-toggle-label{ 
          display: none;
@@ -160,3 +251,6 @@ nav a:hover{
 
 
 }
+
+
+*/
