@@ -35,7 +35,8 @@ body{
     background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
-    font-size: 1.3125rem;
+    font-size: 1.125rem;
+    /* font-size: 1.3125rem; */
     line-height: 1.4;
 }
 
@@ -46,6 +47,16 @@ h3 {
     line-height: 1.1;
     margin-bottom: .5em;
     color:var(--clr-primary-800);
+}
+
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 1.5rem;
 }
 
 h5,
@@ -108,12 +119,35 @@ button {
     border-radius: 3.125rem;
 }
 
-.button_request{
-    color: white;
+.button__request{
+    color: var(--clr-primary-800);
 }
 
-.button_learn{
+.button__learn{
 
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid red;
+}
+
+main div{
+    position:absolute;
+    text-align: left;
+    width: 55%;
+}
+
+.main_image{
+    /* position:absolute; */
+    /* bottom: 0;
+    right: 0; */
+    width: 65%;
+    margin-left: auto;
+    margin-top:4.35rem;
 }
 
 @media only screen and (max-width: 55rem) {
@@ -124,6 +158,17 @@ button {
     img{
         margin-left: auto;
         margin-right: auto;
+    }
+
+    main div{
+        position:static;
+        text-align: center;
+        width: 100%;
+    }
+    .main_image{
+        width:100%;
+        margin-top: 1rem;
+        
     }
     
 }
