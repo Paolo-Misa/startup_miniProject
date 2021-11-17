@@ -11,8 +11,10 @@
     --clr-primary-500:rgba(45, 156, 219, .1);
     --clr-primary-800:#212353;
     --clr-primary-900: #4B5D68;
-    
 
+    --media-size-66: 66.313em;
+    
+    --max-width: 66.313em;
     
 }
 
@@ -51,6 +53,7 @@ h3 {
 
 h1{
     font-size: 5rem;
+    
 }
 h2{
     font-size: 2.5rem;
@@ -99,21 +102,23 @@ section{
     width: min(90%, 65rem);
 }
 
-/* .main_image{
-    width:100%;
-    border:1px solid blue;
-}
-
-.image__2{
-    width:50%;
-    border: 1px solid red;
-} */
-
 img{
     max-width: 100%;
     display: block;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
+
+@media only screen and (max-width:66.313em) {
+    .container{
+        text-align:center;
+    }
+
+    img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 button {
     border-radius: 3.125rem;
@@ -132,43 +137,177 @@ main{
     display: flex;
     flex-direction: column;
     position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    /* background-image: url("../images/imageMain.svg"); */
+    /* background-position-x: right ;
+    background-position-y: bottom ;
+    background-repeat: no-repeat;
+    background-size: 60%; */
+    
+  
 }
 
 main div{
-    position:absolute;
+    /* position:absolute; */
     text-align: left;
-    width: 55%;
+    /* position: relative; */
+    /* width: 55%;   */
+    /* margin-right: 40%; */
+    /* border:1px solid black; */
+    /* padding-top: 20px; */
+    /* margin: 50px; */
+    /* padding-bottom: 20px; */
+    border: 1px solid black;
+    
+}
+main div h1{
+    max-width:60%;
+    border: 1px solid black;
+}
+main p{
+    max-width: 45%;
+    border: 1px solid black;
 }
 
 .main_image{
-    /* position:absolute; */
-    /* bottom: 0;
-    right: 0; */
-    width: 65%;
+    position:absolute;
+    width: 60%;
+    bottom: 0;
+    right: 0;
+    /* width: 55%; */
     margin-left: auto;
     margin-top:4.35rem;
+    z-index: -1;
 }
 
-@media only screen and (max-width: 55rem) {
-    .container{
-        text-align:center;
-    }
 
-    img{
-        margin-left: auto;
-        margin-right: auto;
-    }
 
+@media only screen and (max-width: 66.313em) {
+   
     main div{
         position:static;
         text-align: center;
         width: 100%;
+        padding: 0;
     }
     .main_image{
-        width:100%;
+        position: static;
+        width:70%;
         margin-top: 1rem;
         
     }
+
+    main div h1{
+        max-width: 100%;
+    }
+
+    main p{
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
 }
+
+
+.secondary{
+    display: flex;
+}
+
+.secondary_image, .secondary_content{
+   flex: 1 0 0;
+   border: 1px solid orange;
+   
+}
+
+.secondary_image{
+    /* width: auto; */
+    border: 1px solid aqua;
+}
+
+.image__2{
+    /* display: block; */
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    object-fit: cover;
+    border: 1px solid red;
+}
+
+@media only screen and (max-width: 66.313em){
+    .secondary{
+        flex-direction: column;
+    }
+
+    .secondary_image{
+        
+    }
+}
+
+.features{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .2fr 1fr 1fr;
+}
+
+.features_headline{
+    text-align: center;
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.features__search{
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.features__access{
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.features__print{
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.features__security{
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+@media only screen and (max-width: 66.313em){
+    .features{
+        all:unset;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr 1fr 1fr 1fr;
+        /* border: 1px solid yellow; */
+    }
+
+    .features_headline{
+        /* grid-column: 1; */
+        grid-row: 1/2;
+        border: 1px solid yellow;
+    }
+
+    .features__search{
+        border: 1px solid red;
+        grid-row: 2/3;
+    }
+    .features__access{
+        grid-row: 3/4;
+    }
+    .features__print{
+        grid-row: 4/5;
+    }
+    .features__security{
+        grid-row: 5/6;
+    }
+}
+
+
